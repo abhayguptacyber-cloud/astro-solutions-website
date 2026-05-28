@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -54,14 +55,17 @@ body{
 }
 
 @keyframes twinkle{
+
   from{
     opacity:0.2;
     transform:scale(1);
   }
+
   to{
     opacity:1;
     transform:scale(1.8);
   }
+
 }
 
 /* ================= GLOW BACKGROUND ================= */
@@ -109,7 +113,7 @@ nav{
 
 .logo{
   color:#f4b000;
-  font-size:30px;
+  font-size:28px;
   font-weight:700;
 }
 
@@ -129,8 +133,6 @@ nav ul li a:hover{
   color:#f4b000;
 }
 
-/* ================= MOBILE MENU ================= */
-
 .menu-toggle{
   display:none;
   font-size:30px;
@@ -138,14 +140,14 @@ nav ul li a:hover{
   color:#f4b000;
 }
 
-/* ================= HERO SECTION ================= */
+/* ================= HERO ================= */
 
 .hero{
   min-height:100vh;
   display:flex;
   align-items:center;
   justify-content:center;
-  padding:120px 8% 80px;
+  padding:130px 8% 80px;
   gap:60px;
   flex-wrap:wrap;
 }
@@ -192,7 +194,7 @@ nav ul li a:hover{
   animation:floatImage 4s ease-in-out infinite;
 }
 
-/* ================= ZODIAC ANIMATION ================= */
+/* ================= ZODIAC ================= */
 
 .zodiac{
   position:absolute;
@@ -216,12 +218,15 @@ nav ul li a:hover{
 .z4{bottom:10%;right:20%;}
 
 @keyframes rotateZodiac{
+
   from{
-    transform:rotate(0deg) translateY(0);
+    transform:rotate(0deg);
   }
+
   to{
-    transform:rotate(360deg) translateY(-10px);
+    transform:rotate(360deg);
   }
+
 }
 
 /* ================= BUTTONS ================= */
@@ -238,6 +243,8 @@ nav ul li a:hover{
   text-decoration:none;
   font-weight:600;
   transition:0.3s;
+  border:none;
+  cursor:pointer;
 }
 
 .btn-primary{
@@ -319,7 +326,7 @@ section{
   margin-bottom:20px;
 }
 
-/* ================= TESTIMONIAL SLIDER ================= */
+/* ================= TESTIMONIALS ================= */
 
 .slider{
   overflow:hidden;
@@ -329,7 +336,7 @@ section{
 .slide-track{
   display:flex;
   width:300%;
-  animation:scrollSlider 18s linear infinite;
+  animation:scrollSlider 30s infinite;
 }
 
 .slide{
@@ -347,18 +354,35 @@ section{
 }
 
 @keyframes scrollSlider{
+
   0%{
     transform:translateX(0);
   }
-  33%{
+
+  30%{
+    transform:translateX(0);
+  }
+
+  35%{
     transform:translateX(-100%);
   }
-  66%{
+
+  65%{
+    transform:translateX(-100%);
+  }
+
+  70%{
     transform:translateX(-200%);
   }
+
+  95%{
+    transform:translateX(-200%);
+  }
+
   100%{
     transform:translateX(0);
   }
+
 }
 
 /* ================= CONTACT ================= */
@@ -390,12 +414,6 @@ section{
 .contact-box a{
   color:#f4b000;
   text-decoration:none;
-}
-
-/* ================= BOOKING CALENDAR ================= */
-
-.calendar{
-  margin-top:20px;
 }
 
 /* ================= NEWSLETTER ================= */
@@ -473,52 +491,95 @@ section{
   text-decoration:none;
   font-weight:600;
   animation:floatBtn 2s infinite;
-}
-
-@keyframes floatBtn{
-  0%{
-    transform:translateY(0);
-  }
-  50%{
-    transform:translateY(-8px);
-  }
-  100%{
-    transform:translateY(0);
-  }
+  z-index:1000;
 }
 
 /* ================= FOOTER ================= */
 
-footer{
-  background:black;
+.footer{
+  background:#000;
+  padding:70px 8% 20px;
+}
+
+.footer-container{
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(250px,1fr));
+  gap:40px;
+  margin-bottom:40px;
+}
+
+.footer-box h3{
+  color:#f4b000;
+  margin-bottom:20px;
+}
+
+.footer-box p,
+.footer-box a{
+  color:#bbb;
+  text-decoration:none;
+  display:block;
+  margin-bottom:12px;
+  transition:0.3s;
+}
+
+.footer-box a:hover{
+  color:#f4b000;
+}
+
+.footer-bottom{
+  border-top:1px solid #222;
+  padding-top:20px;
   text-align:center;
-  padding:30px;
-  color:#888;
+  color:#777;
 }
 
 /* ================= ANIMATIONS ================= */
 
 @keyframes fadeUp{
+
   from{
     opacity:0;
     transform:translateY(40px);
   }
+
   to{
     opacity:1;
     transform:translateY(0);
   }
+
 }
 
 @keyframes floatImage{
+
   0%{
     transform:translateY(0);
   }
+
   50%{
     transform:translateY(-15px);
   }
+
   100%{
     transform:translateY(0);
   }
+
+}
+
+@keyframes floatBtn{
+
+  0%{
+    transform:translateY(0);
+  }
+
+  50%{
+    transform:translateY(-8px);
+  }
+
+  100%{
+    transform:translateY(0);
+  }
+
 }
 
 /* ================= MOBILE ================= */
@@ -566,20 +627,7 @@ footer{
 
 <!-- ================= STARS ================= -->
 
-<div class="stars">
-
-<script>
-for(let i=0;i<120;i++){
-  let star=document.createElement('div');
-  star.className='star';
-  star.style.left=Math.random()*100+'%';
-  star.style.top=Math.random()*100+'%';
-  star.style.animationDuration=(Math.random()*5+2)+'s';
-  document.querySelector('.stars').appendChild(star);
-}
-</script>
-
-</div>
+<div class="stars"></div>
 
 <!-- ================= NAVBAR ================= -->
 
@@ -611,15 +659,15 @@ ASTRO SOLUTIONS
 
 <div class="hero-text">
 
-
+<div class="tagline">
+YOU ARE JUST A CALL AWAY TO LIVE A GOOD LIFE
+</div>
 
 <h1>
 ASTRO SOLUTIONS <br>
 BY MAMTA GUPTA
 </h1>
-<div class="tagline">
-YOU ARE JUST A CALL AWAY TO LIVE A GOOD LIFE
-</div>
+
 <p>
 Professional astrology consultation for Horoscope,
 Vaastu, Match Making, Career, Finance and Health Guidance.
@@ -917,9 +965,71 @@ WhatsApp
 
 <!-- ================= FOOTER ================= -->
 
-<footer>
+<footer class="footer">
 
-© 2026 Astro Solutions By Mamta Gupta | All Rights Reserved
+<div class="footer-container">
+
+<div class="footer-box">
+
+<h3>
+Astro Solutions By Mamta Gupta
+</h3>
+
+<p>
+Trusted astrology consultation for Horoscope,
+Vaastu, Match Making, Career and Health Guidance.
+</p>
+
+</div>
+
+<div class="footer-box">
+
+<h3>
+Quick Links
+</h3>
+
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
+
+</div>
+
+<div class="footer-box">
+
+<h3>
+Contact
+</h3>
+
+<p>
+📞
+<a href="tel:+917017898533">
+7017898533
+</a>
+</p>
+
+<p>
+📧
+<a href="mailto:3003mamta@gmail.com">
+3003mamta@gmail.com
+</a>
+</p>
+
+<p>
+📍 Meerut, Uttar Pradesh
+</p>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+© 2026 Astro Solutions By Mamta Gupta |
+All Rights Reserved
+
+</div>
 
 </footer>
 
@@ -927,38 +1037,120 @@ WhatsApp
 
 <script>
 
-function toggleMenu(){
-  document.getElementById('menu').classList.toggle('active');
+/* ===== STARS ===== */
+
+window.onload = function(){
+
+  const starsContainer =
+  document.querySelector('.stars');
+
+  for(let i = 0; i < 120; i++){
+
+    let star = document.createElement('div');
+
+    star.classList.add('star');
+
+    star.style.left =
+    Math.random() * 100 + '%';
+
+    star.style.top =
+    Math.random() * 100 + '%';
+
+    star.style.animationDuration =
+    (Math.random() * 5 + 3) + 's';
+
+    starsContainer.appendChild(star);
+
+  }
+
 }
+
+/* ===== MOBILE MENU ===== */
+
+function toggleMenu(){
+
+  document.getElementById('menu')
+  .classList.toggle('active');
+
+}
+
+/* ===== LANGUAGE SWITCH ===== */
+
+let isHindi = false;
 
 function toggleLanguage(){
 
-  alert("Hindi language version coming soon.");
+  const title =
+  document.querySelector('.hero-text h1');
+
+  const tagline =
+  document.querySelector('.tagline');
+
+  const paragraph =
+  document.querySelector('.hero-text p');
+
+  if(!isHindi){
+
+    title.innerHTML =
+    "एस्ट्रो सॉल्यूशन्स <br> बाय ममता गुप्ता";
+
+    tagline.innerHTML =
+    "एक अच्छी जिंदगी जीने के लिए बस एक कॉल दूर";
+
+    paragraph.innerHTML =
+    "ज्योतिष, वास्तु, करियर, स्वास्थ्य और कुंडली सलाह के लिए भरोसेमंद परामर्श।";
+
+    isHindi = true;
+
+  }else{
+
+    title.innerHTML =
+    "ASTRO SOLUTIONS <br> BY MAMTA GUPTA";
+
+    tagline.innerHTML =
+    "YOU ARE JUST A CALL AWAY TO LIVE A GOOD LIFE";
+
+    paragraph.innerHTML =
+    "Professional astrology consultation for Horoscope, Vaastu, Match Making, Career, Finance and Health Guidance.";
+
+    isHindi = false;
+
+  }
 
 }
 
+/* ===== CHATBOT ===== */
+
 function sendMessage(){
 
-  let input=document.getElementById('chatInput');
+  let input =
+  document.getElementById('chatInput');
 
-  let chat=document.getElementById('chatBody');
+  let chat =
+  document.getElementById('chatBody');
 
   if(input.value.trim()!==""){
 
-    let user=document.createElement('p');
-    user.innerHTML="<strong>You:</strong> "+input.value;
+    let user =
+    document.createElement('p');
 
-    let bot=document.createElement('p');
+    user.innerHTML =
+    "<strong>You:</strong> " + input.value;
 
-    bot.innerHTML="<strong>Astro AI:</strong> Thank you for your question. Please contact Mamta Gupta directly for detailed consultation.";
+    let bot =
+    document.createElement('p');
+
+    bot.innerHTML =
+    "<strong>Astro AI:</strong> Thank you for your question. Please contact Mamta Gupta directly for detailed consultation.";
 
     chat.appendChild(user);
 
     chat.appendChild(bot);
 
-    input.value="";
+    input.value = "";
 
-    chat.scrollTop=chat.scrollHeight;
+    chat.scrollTop =
+    chat.scrollHeight;
 
   }
 
@@ -967,4 +1159,5 @@ function sendMessage(){
 </script>
 
 </body>
+
 </html>
