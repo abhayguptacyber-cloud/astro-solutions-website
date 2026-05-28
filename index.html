@@ -5,7 +5,7 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<meta name="google-site-verification" content="w0BHHGs-t-TD131V5QDSllbmQLI2JPOpMYAt4-sC5Q4" />
+
   <title>Astro Solutions By Mamta Gupta</title>
 
   <!-- SEO -->
@@ -15,6 +15,9 @@
   <meta name="keywords" content="Astrologer in Meerut, Horoscope Reading, Vaastu Consultant, Kundli Matching, Mamta Gupta Astrology">
 
   <meta name="author" content="Mamta Gupta">
+
+  <!-- GOOGLE SEARCH CONSOLE -->
+  <meta name="google-site-verification" content="w0BHHGs-t-TD131V5QDSllbmQLI2JPOpMYAt4-sC5Q4" />
 
   <!-- FAVICON -->
 
@@ -42,22 +45,6 @@
       color:#222;
       line-height:1.6;
       overflow-x:hidden;
-      position:relative;
-    }
-
-    /* ================= GOLDEN GLOW ================= */
-
-    body::before{
-      content:'';
-      position:fixed;
-      width:500px;
-      height:500px;
-      background:rgba(244,176,0,0.08);
-      border-radius:50%;
-      top:-200px;
-      right:-150px;
-      z-index:-1;
-      filter:blur(80px);
     }
 
     /* ================= NAVBAR ================= */
@@ -206,6 +193,8 @@
       transition:0.3s ease;
       display:inline-block;
       font-weight:600;
+      border:none;
+      cursor:pointer;
     }
 
     .btn:hover{
@@ -290,11 +279,6 @@
       max-width:100%;
       border-radius:25px;
       box-shadow:0 10px 25px rgba(0,0,0,0.15);
-      transition:0.4s;
-    }
-
-    .about img:hover{
-      transform:scale(1.02);
     }
 
     .about-text{
@@ -322,11 +306,6 @@
       border-radius:18px;
       border-left:5px solid #f4b000;
       box-shadow:0 5px 15px rgba(0,0,0,0.08);
-      transition:0.4s ease;
-    }
-
-    .testimonial:hover{
-      transform:translateY(-10px);
     }
 
     .testimonial p{
@@ -379,13 +358,6 @@
       height:150px;
       resize:none;
     }
-
-    button{
-      border:none;
-      cursor:pointer;
-    }
-
-    /* ================= GOOGLE MAP ================= */
 
     iframe{
       margin-top:25px;
@@ -447,11 +419,6 @@
       font-weight:600;
       box-shadow:0 5px 15px rgba(0,0,0,0.2);
       z-index:1000;
-      transition:0.3s ease;
-    }
-
-    .floating-whatsapp:hover{
-      transform:scale(1.05);
     }
 
     /* ================= MOBILE ================= */
@@ -476,15 +443,10 @@
 
       .hero{
         text-align:center;
-        padding-top:50px;
       }
 
       .hero-text h1{
         font-size:48px;
-      }
-
-      .tagline{
-        font-size:14px;
       }
 
       .hero-text p{
@@ -505,11 +467,6 @@
 
       .about{
         text-align:center;
-      }
-
-      .floating-whatsapp{
-        padding:12px 18px;
-        font-size:14px;
       }
 
     }
@@ -542,12 +499,10 @@
 
     <div class="hero-text">
 
-      <h1>ASTRO SOLUTIONS</h1>
-
-      <div class="tagline">
+        <h1>ASTRO SOLUTIONS</h1>
+        <div class="tagline">
         YOU ARE JUST A CALL AWAY TO LIVE A GOOD LIFE
       </div>
-
       <p>
         Trusted astrology guidance with years of experience in
         Horoscope Reading, Vaastu, Match Making,
@@ -570,7 +525,7 @@
 
     <div class="hero-image">
 
-      <img src="mamta.jpeg"Mamta Gupta">
+      <img src="mamta.jpeg" alt="Mamta Gupta">
 
     </div>
 
@@ -586,44 +541,32 @@
 
       <div class="service-card">
         <h3>Horoscope Reading</h3>
-        <p>
-          Detailed horoscope reading and future life guidance.
-        </p>
+        <p>Detailed horoscope reading and future life guidance.</p>
       </div>
 
       <div class="service-card">
         <h3>Vaastu Consultation</h3>
-        <p>
-          Vaastu solutions for home, office and business growth.
-        </p>
+        <p>Vaastu solutions for home, office and business growth.</p>
       </div>
 
       <div class="service-card">
         <h3>Gems & Stones</h3>
-        <p>
-          Personalized gemstones according to your horoscope.
-        </p>
+        <p>Personalized gemstones according to your horoscope.</p>
       </div>
 
       <div class="service-card">
         <h3>Match Making</h3>
-        <p>
-          Kundli matching and marriage compatibility consultation.
-        </p>
+        <p>Kundli matching and marriage compatibility consultation.</p>
       </div>
 
       <div class="service-card">
         <h3>Kaal Sarp Dosh Nivaran</h3>
-        <p>
-          Astrological remedies and spiritual guidance.
-        </p>
+        <p>Astrological remedies and spiritual guidance.</p>
       </div>
 
       <div class="service-card">
         <h3>Career, Finance & Health</h3>
-        <p>
-          Complete life consultation for success and wellbeing.
-        </p>
+        <p>Complete life consultation for success and wellbeing.</p>
       </div>
 
     </div>
@@ -638,7 +581,7 @@
 
     <div class="about">
 
-      <img src="mamta2.jpeg"About Mamta Gupta">
+      <img src="mamta2.jpeg" alt="About Mamta Gupta">
 
       <div class="about-text">
 
@@ -669,36 +612,27 @@
     <div class="testimonials">
 
       <div class="testimonial">
-
         <p>
           “Very accurate guidance and genuine consultation.
           Highly recommended.”
         </p>
-
         <strong>- Rahul Sharma</strong>
-
       </div>
 
       <div class="testimonial">
-
         <p>
           “The vaastu consultation brought positivity
           and peace to our home.”
         </p>
-
         <strong>- Neha Verma</strong>
-
       </div>
 
       <div class="testimonial">
-
         <p>
           “Professional consultation with practical remedies
           and career guidance.”
         </p>
-
         <strong>- Amit Gupta</strong>
-
       </div>
 
     </div>
@@ -734,8 +668,6 @@
           3003mamta@gmail.com
         </p>
 
-        <!-- REAL MAP -->
-
         <iframe
           src="https://maps.google.com/maps?q=Meenakshipuram%20Meerut&t=&z=13&ie=UTF8&iwloc=&output=embed"
           width="100%"
@@ -747,21 +679,27 @@
 
       </div>
 
+      <!-- ================= FORMSUBMIT FORM ================= -->
+
       <div class="contact-form">
 
         <h3>Send Message</h3>
 
-        <form>
+        <form action="https://formsubmit.co/3003mamta@gmail.com" method="POST">
 
-          <input type="text" placeholder="Your Name" required>
+          <input type="hidden" name="_captcha" value="false">
 
-          <input type="email" placeholder="Your Email" required>
+          <input type="hidden" name="_next" value="https://YOUR-WEBSITE.vercel.app">
 
-          <input type="text" placeholder="Phone Number" required>
+          <input type="text" name="name" placeholder="Your Name" required>
 
-          <textarea placeholder="Write Your Query"></textarea>
+          <input type="email" name="email" placeholder="Your Email" required>
 
-          <button class="btn btn-primary">
+          <input type="text" name="phone" placeholder="Phone Number" required>
+
+          <textarea name="message" placeholder="Write Your Query"></textarea>
+
+          <button type="submit" class="btn btn-primary">
             Send Message
           </button>
 
