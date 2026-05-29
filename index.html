@@ -42,7 +42,7 @@ rel="stylesheet">
   margin:0;
   padding:0;
   box-sizing:border-box;
-  scroll-behavior:smooth;
+  scroll-behavior:auto;
   font-family:'Poppins',sans-serif;
 }
 
@@ -573,13 +573,12 @@ onclick="toggleMenu()">
 <section class="hero">
 
 <div class="hero-text">
-
+ 
 <h1>
 ASTRO SOLUTIONS <br>
 BY MAMTA GUPTA
 </h1>
 
- 
  <div class="tagline">
 YOU ARE JUST A CALL AWAY TO LIVE A GOOD LIFE
 </div>
@@ -896,17 +895,22 @@ Contact
 
 <script>
 
-window.addEventListener('load',()=>{
+window.onload = function () {
 
-  document.getElementById('loader')
-  .style.display='none';
+  // Remove loader
+  document.getElementById('loader').style.display = 'none';
 
-});
+  // Always open from top
+  window.scrollTo(0, 0);
+
+};
+
+// ===== STARS =====
 
 const starsContainer =
 document.querySelector('.stars');
 
-for(let i=0;i<120;i++){
+for(let i = 0; i < 120; i++){
 
   let star =
   document.createElement('div');
@@ -914,17 +918,19 @@ for(let i=0;i<120;i++){
   star.classList.add('star');
 
   star.style.left =
-  Math.random()*100+'%';
+  Math.random() * 100 + '%';
 
   star.style.top =
-  Math.random()*100+'%';
+  Math.random() * 100 + '%';
 
   star.style.animationDuration =
-  (Math.random()*5+3)+'s';
+  (Math.random() * 5 + 3) + 's';
 
   starsContainer.appendChild(star);
 
 }
+
+// ===== MOBILE MENU =====
 
 function toggleMenu(){
 
