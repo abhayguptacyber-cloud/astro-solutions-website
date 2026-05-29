@@ -137,7 +137,7 @@ nav{
 
 .logo{
   color:#f4b000;
-  font-size:28px;
+  font-size:30px;
   font-weight:700;
 }
 
@@ -159,7 +159,7 @@ nav ul li a:hover{
 
 .menu-toggle{
   display:none;
-  font-size:30px;
+  font-size:34px;
   cursor:pointer;
   color:#f4b000;
 }
@@ -171,8 +171,8 @@ nav ul li a:hover{
   display:flex;
   align-items:center;
   justify-content:center;
-  padding:130px 8%;
-  gap:60px;
+  padding:140px 8%;
+  gap:80px;
   flex-wrap:wrap;
 }
 
@@ -189,14 +189,15 @@ nav ul li a:hover{
 }
 
 .hero-text h1{
-  font-size:72px;
+  font-size:75px;
   line-height:1.1;
-  margin-bottom:20px;
+  margin-bottom:25px;
 }
 
 .hero-text p{
   color:#ccc;
-  font-size:20px;
+  font-size:22px;
+  line-height:1.8;
   margin-bottom:35px;
 }
 
@@ -207,9 +208,9 @@ nav ul li a:hover{
 }
 
 .hero-image img{
-  width:420px;
+  width:430px;
   max-width:100%;
-  border-radius:25px;
+  border-radius:30px;
   box-shadow:
   0 0 40px rgba(255,165,0,0.3);
   animation:floatImage 4s ease-in-out infinite;
@@ -260,8 +261,8 @@ nav ul li a:hover{
 /* ===== BUTTONS ===== */
 
 .btn{
-  padding:15px 30px;
-  border-radius:10px;
+  padding:16px 32px;
+  border-radius:12px;
   text-decoration:none;
   font-weight:600;
   transition:0.3s;
@@ -291,7 +292,7 @@ section{
 
 .section-title{
   text-align:center;
-  font-size:48px;
+  font-size:50px;
   color:#f4b000;
   margin-bottom:60px;
 }
@@ -351,6 +352,7 @@ section{
 
 .about-text p{
   color:#ccc;
+  line-height:1.9;
   margin-bottom:20px;
 }
 
@@ -372,6 +374,11 @@ section{
   padding:40px;
   background:rgba(255,255,255,0.05);
   border-radius:20px;
+}
+
+.slide p{
+  line-height:1.8;
+  margin-bottom:15px;
 }
 
 @keyframes scrollSlider{
@@ -476,6 +483,7 @@ section{
   text-decoration:none;
   font-weight:600;
   animation:floatBtn 2s infinite;
+  z-index:999;
 }
 
 @keyframes floatBtn{
@@ -494,19 +502,35 @@ section{
 
 }
 
-/* ===== MOBILE ===== */
+/* ===== MOBILE VIEW ===== */
 
 @media(max-width:900px){
 
+  body{
+    overflow-x:hidden;
+  }
+
+  nav{
+    padding:18px 6%;
+  }
+
+  .logo{
+    font-size:18px;
+    line-height:1.3;
+  }
+
   nav ul{
     position:absolute;
-    top:80px;
-    right:0;
-    background:black;
+    top:75px;
+    right:10px;
+    background:rgba(0,0,0,0.95);
     width:220px;
     flex-direction:column;
-    padding:30px;
+    padding:25px;
+    border-radius:15px;
     display:none;
+    gap:20px;
+    box-shadow:0 0 20px rgba(255,165,0,0.2);
   }
 
   nav ul.active{
@@ -515,22 +539,112 @@ section{
 
   .menu-toggle{
     display:block;
+    font-size:34px;
   }
 
   .hero{
+    flex-direction:column-reverse;
     text-align:center;
+    padding:140px 7% 70px;
+    gap:30px;
+  }
+
+  .hero-text{
+    width:100%;
+  }
+
+  .tagline{
+    font-size:14px;
+    line-height:1.8;
+    margin-bottom:15px;
   }
 
   .hero-text h1{
-    font-size:48px;
+    font-size:52px;
+    line-height:1.1;
+    margin-bottom:20px;
+  }
+
+  .hero-text p{
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:30px;
+  }
+
+  .hero-image{
+    width:100%;
+  }
+
+  .hero-image img{
+    width:220px;
+    border-radius:25px;
+  }
+
+  .zodiac{
+    display:none;
+  }
+
+  .btn{
+    width:100%;
+    margin-bottom:15px;
+    text-align:center;
+    font-size:17px;
+  }
+
+  .btn-primary{
+    margin-right:0;
+  }
+
+  .section-title{
+    font-size:36px;
+  }
+
+  .services{
+    grid-template-columns:1fr;
+  }
+
+  .card{
+    padding:30px;
+  }
+
+  .about{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .about img{
+    width:100%;
+    max-width:320px;
   }
 
   .contact-grid{
     grid-template-columns:1fr;
   }
 
-  .zodiac{
-    display:none;
+  .contact-box{
+    padding:30px;
+  }
+
+  .newsletter input{
+    width:100%;
+    margin-bottom:15px;
+    margin-right:0;
+  }
+
+  .newsletter .btn{
+    width:100%;
+  }
+
+  .footer-container{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .whatsapp{
+    bottom:15px;
+    right:15px;
+    padding:14px 18px;
+    font-size:15px;
   }
 
 }
@@ -573,7 +687,7 @@ onclick="toggleMenu()">
 <section class="hero">
 
 <div class="hero-text">
- 
+
 <h1>
 ASTRO SOLUTIONS <br>
 BY MAMTA GUPTA
@@ -582,7 +696,6 @@ BY MAMTA GUPTA
  <div class="tagline">
 YOU ARE JUST A CALL AWAY TO LIVE A GOOD LIFE
 </div>
-
  
 <p>
 Professional astrology consultation for Horoscope,
@@ -629,51 +742,37 @@ Our Services
 
 <div class="card">
 <h3>Horoscope Reading</h3>
-<p>
-Detailed horoscope analysis and future guidance.
-</p>
+<p>Detailed horoscope analysis and future guidance.</p>
 </div>
 
 <div class="card">
 <h3>Vaastu</h3>
-<p>
-Positive energy and vastu consultation for home and office.
-</p>
+<p>Positive energy and vastu consultation for home and office.</p>
 </div>
 
 <div class="card">
 <h3>Gems & Stones</h3>
-<p>
-Astrological gemstone suggestions for prosperity and balance.
-</p>
+<p>Astrological gemstone suggestions for prosperity and balance.</p>
 </div>
 
 <div class="card">
 <h3>Match Making</h3>
-<p>
-Kundli matching and marriage compatibility consultation.
-</p>
+<p>Kundli matching and marriage compatibility consultation.</p>
 </div>
 
 <div class="card">
 <h3>Kaal Sarp Dosh Nivaran</h3>
-<p>
-Spiritual remedies and astrology guidance for Kaal Sarp Dosh.
-</p>
+<p>Spiritual remedies and astrology guidance for Kaal Sarp Dosh.</p>
 </div>
 
 <div class="card">
 <h3>Career & Finance</h3>
-<p>
-Professional career growth and financial astrology consultation.
-</p>
+<p>Professional career growth and financial astrology consultation.</p>
 </div>
 
 <div class="card">
 <h3>Health Consultation</h3>
-<p>
-Health astrology guidance and positive life consultation.
-</p>
+<p>Health astrology guidance and positive life consultation.</p>
 </div>
 
 </div>
@@ -897,10 +996,8 @@ Contact
 
 window.onload = function () {
 
-  // Remove loader
   document.getElementById('loader').style.display = 'none';
 
-  // Always open from top
   window.scrollTo(0, 0);
 
 };
