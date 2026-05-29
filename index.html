@@ -22,28 +22,14 @@ content="w0BHHGs-t-TD131V5QDSllbmQLI2JPOpMYAt4-sC5Q4" />
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
 rel="stylesheet">
 
-<script type="application/ld+json">
-{
- "@context":"https://schema.org",
- "@type":"LocalBusiness",
- "name":"Astro Solutions By Mamta Gupta",
- "telephone":"7017898533",
- "address":{
-   "@type":"PostalAddress",
-   "addressLocality":"Meerut",
-   "addressCountry":"India"
- }
-}
-</script>
-
 <style>
 
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-  scroll-behavior:auto;
   font-family:'Poppins',sans-serif;
+  scroll-behavior:smooth;
 }
 
 body{
@@ -130,14 +116,14 @@ nav{
   align-items:center;
   position:fixed;
   top:0;
-  background:rgba(0,0,0,0.7);
+  background:rgba(0,0,0,0.8);
   backdrop-filter:blur(10px);
   z-index:1000;
 }
 
 .logo{
   color:#f4b000;
-  font-size:30px;
+  font-size:32px;
   font-weight:700;
 }
 
@@ -159,9 +145,9 @@ nav ul li a:hover{
 
 .menu-toggle{
   display:none;
-  font-size:34px;
-  cursor:pointer;
+  font-size:35px;
   color:#f4b000;
+  cursor:pointer;
 }
 
 /* ===== HERO ===== */
@@ -178,7 +164,6 @@ nav ul li a:hover{
 
 .hero-text{
   flex:1;
-  min-width:300px;
 }
 
 .tagline{
@@ -201,18 +186,11 @@ nav ul li a:hover{
   margin-bottom:35px;
 }
 
-.hero-image{
-  flex:1;
-  text-align:center;
-  position:relative;
-}
-
 .hero-image img{
-  width:430px;
+  width:420px;
   max-width:100%;
   border-radius:30px;
-  box-shadow:
-  0 0 40px rgba(255,165,0,0.3);
+  box-shadow:0 0 40px rgba(255,165,0,0.3);
   animation:floatImage 4s ease-in-out infinite;
 }
 
@@ -232,41 +210,13 @@ nav ul li a:hover{
 
 }
 
-/* ===== ZODIAC ===== */
-
-.zodiac span{
-  position:absolute;
-  font-size:28px;
-  color:rgba(255,215,0,0.4);
-  animation:rotateZodiac 20s linear infinite;
-}
-
-.z1{top:10%;left:20%;}
-.z2{top:20%;right:10%;}
-.z3{bottom:20%;left:10%;}
-.z4{bottom:10%;right:20%;}
-
-@keyframes rotateZodiac{
-
-  from{
-    transform:rotate(0deg);
-  }
-
-  to{
-    transform:rotate(360deg);
-  }
-
-}
-
-/* ===== BUTTONS ===== */
-
 .btn{
   padding:16px 32px;
   border-radius:12px;
   text-decoration:none;
+  display:inline-block;
   font-weight:600;
   transition:0.3s;
-  display:inline-block;
 }
 
 .btn-primary{
@@ -312,24 +262,21 @@ section{
   border-radius:20px;
   transition:0.4s;
   border:1px solid rgba(244,176,0,0.2);
-  box-shadow:0 0 20px rgba(255,165,0,0.08);
 }
 
 .card:hover{
-  transform:translateY(-10px) scale(1.03);
+  transform:translateY(-10px);
   border-color:#f4b000;
-  box-shadow:0 0 30px rgba(255,165,0,0.25);
 }
 
 .card h3{
   color:#f4b000;
   margin-bottom:15px;
-  font-size:24px;
 }
 
 .card p{
   color:#ccc;
-  line-height:1.7;
+  line-height:1.8;
 }
 
 /* ===== ABOUT ===== */
@@ -356,7 +303,7 @@ section{
   margin-bottom:20px;
 }
 
-/* ===== TESTIMONIALS ===== */
+/* ===== REVIEWS ===== */
 
 .slider{
   overflow:hidden;
@@ -369,7 +316,6 @@ section{
 }
 
 .slide{
-  width:100%;
   min-width:100%;
   padding:40px;
   background:rgba(255,255,255,0.05);
@@ -423,20 +369,6 @@ section{
   text-decoration:none;
 }
 
-/* ===== NEWSLETTER ===== */
-
-.newsletter{
-  text-align:center;
-}
-
-.newsletter input{
-  padding:15px;
-  width:300px;
-  border:none;
-  border-radius:10px;
-  margin-right:10px;
-}
-
 /* ===== FOOTER ===== */
 
 .footer{
@@ -465,15 +397,14 @@ section{
 }
 
 .footer-box a{
-  color:#f4b000;
+  color:#cfcfcf;
   text-decoration:none;
-  display:block;
-  margin-bottom:12px;
   transition:0.3s;
+  display:inline-block;
 }
 
 .footer-box a:hover{
-  color:white;
+  color:#f4b000;
   transform:translateX(5px);
 }
 
@@ -493,68 +424,34 @@ section{
   right:20px;
   background:#25d366;
   color:white;
-  padding:15px 20px;
+  padding:15px 22px;
   border-radius:50px;
   text-decoration:none;
   font-weight:600;
-  animation:floatBtn 2s infinite;
   z-index:999;
 }
 
-@keyframes floatBtn{
-
-  0%{
-    transform:translateY(0);
-  }
-
-  50%{
-    transform:translateY(-8px);
-  }
-
-  100%{
-    transform:translateY(0);
-  }
-
-}
-
-/* ===== MOBILE VIEW ===== */
+/* ===== MOBILE ===== */
 
 @media(max-width:900px){
 
-  body{
-    overflow-x:hidden;
-  }
-
-  nav{
-    padding:18px 6%;
-  }
-
-  .logo{
-    font-size:18px;
-    line-height:1.3;
+  .menu-toggle{
+    display:block;
   }
 
   nav ul{
     position:absolute;
-    top:75px;
+    top:80px;
     right:10px;
-    background:rgba(0,0,0,0.95);
-    width:220px;
     flex-direction:column;
+    background:#111;
     padding:25px;
     border-radius:15px;
     display:none;
-    gap:20px;
-    box-shadow:0 0 20px rgba(255,165,0,0.2);
   }
 
   nav ul.active{
     display:flex;
-  }
-
-  .menu-toggle{
-    display:block;
-    font-size:34px;
   }
 
   .hero{
@@ -564,62 +461,25 @@ section{
     gap:30px;
   }
 
-  .hero-text{
-    width:100%;
-  }
-
-  .tagline{
-    font-size:14px;
-    line-height:1.8;
-    margin-bottom:15px;
-  }
-
   .hero-text h1{
     font-size:52px;
-    line-height:1.1;
-    margin-bottom:20px;
   }
 
   .hero-text p{
     font-size:18px;
-    line-height:1.8;
-    margin-bottom:30px;
-  }
-
-  .hero-image{
-    width:100%;
   }
 
   .hero-image img{
-    width:220px;
-    border-radius:25px;
-  }
-
-  .zodiac{
-    display:none;
+    width:230px;
   }
 
   .btn{
     width:100%;
     margin-bottom:15px;
-    text-align:center;
-    font-size:17px;
   }
 
-  .btn-primary{
-    margin-right:0;
-  }
-
-  .section-title{
-    font-size:36px;
-  }
-
-  .services{
+  .contact-grid{
     grid-template-columns:1fr;
-  }
-
-  .card{
-    padding:30px;
   }
 
   .about{
@@ -632,34 +492,9 @@ section{
     max-width:320px;
   }
 
-  .contact-grid{
-    grid-template-columns:1fr;
-  }
-
-  .contact-box{
-    padding:30px;
-  }
-
-  .newsletter input{
-    width:100%;
-    margin-bottom:15px;
-    margin-right:0;
-  }
-
-  .newsletter .btn{
-    width:100%;
-  }
-
   .footer-container{
     grid-template-columns:1fr;
     text-align:center;
-  }
-
-  .whatsapp{
-    bottom:15px;
-    right:15px;
-    padding:14px 18px;
-    font-size:15px;
   }
 
 }
@@ -734,15 +569,6 @@ WhatsApp
 <img src="mamta.jpeg"
 alt="Mamta Gupta">
 
-<div class="zodiac">
-
-<span class="z1">♈</span>
-<span class="z2">♉</span>
-<span class="z3">♊</span>
-<span class="z4">♋</span>
-
-</div>
-
 </div>
 
 </section>
@@ -767,27 +593,27 @@ Our Services
 
 <div class="card">
 <h3>Gems & Stones</h3>
-<p>Astrological gemstone suggestions for prosperity and balance.</p>
+<p>Astrological gemstone suggestions.</p>
 </div>
 
 <div class="card">
 <h3>Match Making</h3>
-<p>Kundli matching and marriage compatibility consultation.</p>
+<p>Kundli matching and marriage compatibility.</p>
 </div>
 
 <div class="card">
 <h3>Kaal Sarp Dosh Nivaran</h3>
-<p>Spiritual remedies and astrology guidance for Kaal Sarp Dosh.</p>
+<p>Spiritual remedies and astrology guidance.</p>
 </div>
 
 <div class="card">
 <h3>Career & Finance</h3>
-<p>Professional career growth and financial astrology consultation.</p>
+<p>Professional career and financial consultation.</p>
 </div>
 
 <div class="card">
 <h3>Health Consultation</h3>
-<p>Health astrology guidance and positive life consultation.</p>
+<p>Health astrology guidance and positive consultation.</p>
 </div>
 
 </div>
@@ -871,7 +697,7 @@ Book Consultation
 <div class="contact-box">
 
 <p>
-📞
+📞 
 <a href="tel:+917017898533">
 7017898533
 </a>
@@ -880,7 +706,7 @@ Book Consultation
 <br>
 
 <p>
-📧
+📧 
 <a href="mailto:3003mamta@gmail.com">
 3003mamta@gmail.com
 </a>
@@ -889,7 +715,11 @@ Book Consultation
 <br>
 
 <p>
-📍 Meerut, Uttar Pradesh
+📍 
+<a href="https://maps.app.goo.gl/hE4HovtQGKpawYqF8"
+target="_blank">
+Open Location
+</a>
 </p>
 
 </div>
@@ -932,21 +762,6 @@ Send Message
 
 </section>
 
-<section class="newsletter">
-
-<h2 class="section-title">
-Subscribe For Daily Horoscope
-</h2>
-
-<input type="email"
-placeholder="Enter Your Email">
-
-<button class="btn btn-primary">
-Subscribe
-</button>
-
-</section>
-
 <a href="https://wa.me/917017898533"
 class="whatsapp">
 WhatsApp
@@ -963,8 +778,7 @@ Astro Solutions
 </h3>
 
 <p>
-Professional astrology consultation services for Horoscope,
-Vaastu, Match Making, Career, Finance and Health Guidance.
+Professional astrology consultation services.
 </p>
 
 </div>
@@ -975,18 +789,17 @@ Vaastu, Match Making, Career, Finance and Health Guidance.
 Quick Links
 </h3>
 
-<a href="#">Home</a>
-<a href="#services">Services</a>
-<a href="#about">About</a>
-<a href="#reviews">Reviews</a>
-<a href="#contact">Contact</a>
+<p><a href="#">Home</a></p>
+<p><a href="#services">Services</a></p>
+<p><a href="#about">About</a></p>
+<p><a href="#contact">Contact</a></p>
 
 </div>
 
 <div class="footer-box">
 
 <h3>
-Contact Me
+Contact
 </h3>
 
 <p>
@@ -1004,14 +817,10 @@ Contact Me
 </p>
 
 <p>
-📍 Meerut, Uttar Pradesh
-</p>
-
-<p>
 📍 
-<a href="https://maps.app.goo.gl/suuE4GrK2AJhhKtH8"
+<a href="https://maps.app.goo.gl/hE4HovtQGKpawYqF8"
 target="_blank">
-Open Location
+Meerut, Uttar Pradesh
 </a>
 </p>
 
@@ -1021,7 +830,7 @@ Open Location
 
 <div class="footer-bottom">
 
-© 2026 Astro Solutions By Mamta Gupta | All Rights Reserved
+© 2026 Astro Solutions By Mamta Gupta
 
 </div>
 
@@ -1029,20 +838,21 @@ Open Location
 
 <script>
 
-window.onload = function () {
+window.onload = function(){
 
-  document.getElementById('loader').style.display = 'none';
+  document.getElementById('loader')
+  .style.display='none';
 
-  window.scrollTo(0, 0);
+  window.scrollTo(0,0);
 
-};
+}
 
 // ===== STARS =====
 
 const starsContainer =
 document.querySelector('.stars');
 
-for(let i = 0; i < 120; i++){
+for(let i=0;i<120;i++){
 
   let star =
   document.createElement('div');
@@ -1050,19 +860,19 @@ for(let i = 0; i < 120; i++){
   star.classList.add('star');
 
   star.style.left =
-  Math.random() * 100 + '%';
+  Math.random()*100+'%';
 
   star.style.top =
-  Math.random() * 100 + '%';
+  Math.random()*100+'%';
 
   star.style.animationDuration =
-  (Math.random() * 5 + 3) + 's';
+  (Math.random()*5+3)+'s';
 
   starsContainer.appendChild(star);
 
 }
 
-// ===== MOBILE MENU =====
+// ===== MENU =====
 
 function toggleMenu(){
 
