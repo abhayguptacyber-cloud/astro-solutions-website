@@ -429,6 +429,23 @@ section{
   text-decoration:none;
   font-weight:600;
   z-index:999;
+  animation:floatBtn 2s infinite;
+}
+
+@keyframes floatBtn{
+
+  0%{
+    transform:translateY(0);
+  }
+
+  50%{
+    transform:translateY(-8px);
+  }
+
+  100%{
+    transform:translateY(0);
+  }
+
 }
 
 /* ===== MOBILE ===== */
@@ -538,15 +555,15 @@ onclick="toggleMenu()">
 
 <div class="hero-text">
 
-<div class="tagline">
-YOU ARE JUST A CALL AWAY TO LIVE A GOOD LIFE
-</div>
-
 <h1>
 ASTRO SOLUTIONS <br>
 BY MAMTA GUPTA
 </h1>
-
+  
+<div class="tagline">
+YOU ARE JUST A CALL AWAY TO LIVE A GOOD LIFE
+</div>
+  
 <p>
 Professional astrology consultation for Horoscope,
 Vaastu, Match Making, Career, Finance and Health Guidance.
@@ -778,7 +795,8 @@ Astro Solutions
 </h3>
 
 <p>
-Professional astrology consultation services.
+Professional astrology consultation services for Horoscope,
+Vaastu, Match Making, Career, Finance and Health Guidance.
 </p>
 
 </div>
@@ -792,6 +810,7 @@ Quick Links
 <p><a href="#">Home</a></p>
 <p><a href="#services">Services</a></p>
 <p><a href="#about">About</a></p>
+<p><a href="#reviews">Reviews</a></p>
 <p><a href="#contact">Contact</a></p>
 
 </div>
@@ -799,7 +818,7 @@ Quick Links
 <div class="footer-box">
 
 <h3>
-Contact
+Contact Me
 </h3>
 
 <p>
@@ -830,7 +849,7 @@ Meerut, Uttar Pradesh
 
 <div class="footer-bottom">
 
-© 2026 Astro Solutions By Mamta Gupta
+© 2026 Astro Solutions By Mamta Gupta | All Rights Reserved
 
 </div>
 
@@ -842,8 +861,6 @@ window.onload = function(){
 
   document.getElementById('loader')
   .style.display='none';
-
-  window.scrollTo(0,0);
 
 }
 
